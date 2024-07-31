@@ -1,0 +1,261 @@
+{
+  //
+  // Nicholas VSCode User Settings
+  // ===========================================================================
+  // This file contains Nicholas's preferred VSCode user settings for
+  // development work.
+  //
+  // Development Setup
+  // ---------------------------------------------------------------------------
+  // The development environment setup is as follows:
+  // - VSCode is installed on Windows 11 partition and used mainly in WSL2.
+  // - Source code files primarily deals with English language.
+  // - Extensions with verified ownership are preferred.
+  // - See extensions.json for extensions that work with this user settings
+  //
+  // VSCode User Settings
+  // ---------------------------------------------------------------------------
+  // VSCode has default settings out of the box, which are described in the URL
+  // https://code.visualstudio.com/docs/getstarted/settings#_default-settings.
+  // Settings specified below either deviate from the default settings, or are
+  // settings specific to installed extensions.
+  //
+  // Global Settings
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  // Disable vscode telemetry back to Microsoft
+  "telemetry.telemetryLevel": "off",
+  // Enable mouse wheel zoom for text when holding Ctrl + scrolling mouse wheel
+  "editor.mouseWheelZoom": true,
+  // VSCode Explorer window sorts files by type
+  "explorer.sortOrder": "type",
+  // Set 3 rulers with different colours for positions 80, 100, 120
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#315031"
+    },
+    {
+      "column": 100,
+      "color": "#533500"
+    },
+    {
+      "column": 120,
+      "color": "#4b3249"
+    }
+  ],
+  // Enable following additional features to highlight sus Unicode characters
+  "editor.unicodeHighlight.includeComments": true,
+  "editor.unicodeHighlight.nonBasicASCII": true,
+  // Select VSCode dark or light theme based on OS theme
+  "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+  "workbench.preferredLightColorTheme": "Visual Studio Light",
+  "window.autoDetectColorScheme": true,
+  // Disable Preview mode from Quick Open menu
+  "workbench.editor.enablePreview": false,
+  // Remove trailing new lines and empty spaces
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  // Git settings
+  "git.autofetch": "all",
+  // Dev container settings
+  "dev.containers.executeInWSL": true,
+  "dev.containers.defaultExtensions": [
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-british-english"
+  ],
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
+  "editor.minimap.enabled": false,
+  // Code Spell Checker extension settings
+  "cSpell.language": "en-GB",
+  "cSpell.enabledFileTypes": {
+    "*": true,
+    "json": false,
+    "jsonc": false
+  },
+  "cSpell.overrides": [
+    {
+      "filename": "**/*.md",
+      "ignoreRegExpList": [
+        "`[^`]*`" // `Technical names` enclosed within backticks
+      ]
+    },
+    {
+      "filename": "**/*.rst",
+      "ignoreRegExpList": [
+        "``[^`]*``", // ``Technical names`` enclosed within double backticks
+        "\\.\\.\\s.*?:{2}", // .. rst:: RST keywords
+        "\\S*/\\S*", // Technical word: directory/paths
+        "\\S*_\\S*" // Technical word: variables_with_underscores
+      ]
+    },
+    {
+      "filename": "**/*.sh",
+      "ignoreRegExpList": [
+        "^(?!#).*" // Non-comment lines that do not start with #
+      ]
+    },
+    {
+      "filename": "**/Makefile",
+      "ignoreRegExpList": [
+        "^(?!#).*" // Non-comment lines that do not start with #
+      ]
+    },
+    {
+      "filename": "**/*.{c,h,cpp,hpp}",
+      "ignoreRegExpList": [
+        "^(?!\\s*//).*" // Non-comment lines that do not start with //
+      ]
+    }
+  ],
+  // Material Icon Theme extension: set workbench to use extension icons
+  "workbench.iconTheme": "material-icon-theme",
+  // ESLint extension:
+  "eslint.validate": [
+    "javascript"
+  ],
+  // C/C++ extension:
+  "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, BreakBeforeBraces: Allman, LambdaBodyIndentation: Signature, IndentWidth: 2, ContinuationIndentWidth: 2 }",
+  //
+  // Filetype Settings
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  // C language
+  "[c][cpp]": {
+    "editor.wordBasedSuggestions": "off",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.stickyScroll.defaultModel": "foldingProviderModel",
+    "editor.suggest.insertMode": "replace",
+    // Use 2 spaces for tabs
+    // Use 2 spaces for tabs
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true
+  },
+  // JSON with Comments files
+  "[jsonc]": {
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ],
+    // Use 2 spaces for tabs
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    // Use VSCode in-built JSON syntax formatter
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  // JSON files
+  "[json]": {
+    // Use 2 spaces for tabs
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    // Use VSCode in-built JSON syntax formatter
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    // Use 2 spaces for tabs
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    // Use Prettier for Javascript syntax formatter
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    // Use ESLint to lint JavaScript
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  // Markdown files
+  "[markdown]": {
+    // Settings that deviate from VSCode defaults
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "editor.unicodeHighlight.invisibleCharacters": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.wordWrap": "off",
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ],
+    // Use 3 spaces for tabs
+    "editor.detectIndentation": false,
+    "editor.tabSize": 3,
+    "editor.insertSpaces": true,
+    // cSpell extension defaults for markdown
+    "cSpell.fixSpellingWithRenameProvider": true,
+    "cSpell.advanced.feature.useReferenceProviderWithRename": true,
+    "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/"
+  },
+  // Plaintext files
+  "[plaintext]": {
+    // Overwrite VSCode defaults
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "editor.unicodeHighlight.invisibleCharacters": true,
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ]
+  },
+  // python files
+  "[python]": {
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ],
+    // Use 4 spaces per tab (as per PEP8 guidelines)
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    // Use Microsoft Python extension code formatter
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  // reStructuredText
+  "[restructuredtext]": {
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ],
+    // Use 3 spaces per tab (as per Sphinx rst guidelines)
+    "editor.detectIndentation": false,
+    "editor.tabSize": 3,
+    "editor.insertSpaces": true
+  },
+  // Shell scripts
+  "[shellscript]": {
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ],
+    // Use 2 spaces for tabs
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    // Use shell-format extension shell script formatter
+    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.formatOnSave": true
+  }
+}

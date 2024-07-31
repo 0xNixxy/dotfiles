@@ -1,0 +1,31 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about
+  // workspace recommendations.
+  // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+  "recommendations": [
+    // Remote Development Extension Pack, needed for VSCode in WSL & DevCons
+    "ms-vscode-remote.vscode-remote-extensionpack",
+    // Prettier code formatter
+    "esbenp.prettier-vscode",
+    // Python Extension Pack
+    "ms-python.python",
+    // Black formatter for Python
+    "ms-python.black-formatter",
+    // Markdown linter and format check. Use CLI shellcheck for linting.
+    "davidanson.vscode-markdownlint",
+    // JavaScript-type language linter
+    "dbaeumer.vscode-eslint",
+    // Shell script, dockerfile, etc script formatter
+    "foxundermoon.shell-format",
+    // C++ tools
+    "ms-vscode.cpptools",
+    // Facilitate GitHub PR management
+    "github.vscode-pull-request-github",
+    // Material Icon Theme
+    "PKief.material-icon-theme",
+    // Code spell checker
+    "streetsidesoftware.code-spell-checker",
+    // Code spell checker - UK spelling dictionary
+    "streetsidesoftware.code-spell-checker-british-english",
+  ]
+}
