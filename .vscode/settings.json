@@ -1,0 +1,132 @@
+{
+  //
+  // Nicholas VSCode User Settings
+  // ===========================================================================
+  // This file contains Nicholas's preferred VSCode user settings for
+  // development work.
+  //
+  // Development Setup
+  // ---------------------------------------------------------------------------
+  // The development environment setup is as follows:
+  // - VSCode is installed on Windows 11 partition and used mainly in WSL2.
+  // - Source code files primarily deals with English language.
+  // - VSCode extensions are arranged as follows:
+  //   - Productivity extensions are installed locally in development
+  //     environment.
+  //   - Language-specific extensions are installed in Workspace environment.
+  //   - Workspace environment is usually set up within a DevContainer.
+  //
+  // Preferred Extensions
+  // ---------------------------------------------------------------------------
+  // The following is my preferred list of productivity extensions
+  // - "aaron-bond.better-comments"
+  // - "donjayamanne.githistory"
+  // - "GitHub.vscode-pull-request-github"
+  // - "Gruntfuggly.todo-tree"
+  // - "ms-vscode-remote.vscode-remote-extensionpack"
+  // - "oderwat.indent-rainbow"
+  // - "PKief.material-icon-theme"
+  // - "stkb.rewrap"
+  // - "streetsidesoftware.code-spell-checker"
+  // - "streetsidesoftware.code-spell-checker-british-english"
+  //
+  // VSCode User Settings
+  // ---------------------------------------------------------------------------
+  // VSCode has default settings out of the box, which are described in the URL
+  // https://code.visualstudio.com/docs/getstarted/settings#_default-settings.
+  // Settings specified below either deviate from the default settings, or are
+  // settings specific to installed extensions.
+  //
+  // Global Settings
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  // Disable vscode telemetry back to Microsoft
+  "telemetry.telemetryLevel": "off",
+  // Enable mouse wheel zoom for text when holding Ctrl + scrolling mouse wheel
+  "editor.mouseWheelZoom": true,
+  // Set 3 rulers with different colours for positions 80, 100, 120
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#315031"
+    },
+    {
+      "column": 100,
+      "color": "#533500"
+    },
+    {
+      "column": 120,
+      "color": "#4b3249"
+    }
+  ],
+  // Enable following additional features to highlight sus Unicode characters
+  "editor.unicodeHighlight.includeComments": true,
+  "editor.unicodeHighlight.nonBasicASCII": true,
+  // Select VSCode dark or light theme based on OS theme
+  "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+  "workbench.preferredLightColorTheme": "Visual Studio Light",
+  "window.autoDetectColorScheme": true,
+  // Remove trailing new lines and empty spaces
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  // Git settings
+  "git.autofetch": true,
+  // Dev container settings
+  "dev.containers.executeInWSL": true,
+  "dev.containers.defaultExtensions": [
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-british-english"
+  ],
+  // Enable Windows VSCode to trust local WSL workspace
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
+  // Code Spell Checker extension: use British dictionary
+  "cSpell.language": "en-GB",
+  // Material Icon Theme extension: set workbench to use extension icons
+  "workbench.iconTheme": "material-icon-theme",
+  // Rewrap extension: auto-wrap at 80 characters per line as a default
+  "rewrap.wrappingColumn": 80,
+  "rewrap.autoWrap.enabled": true,
+  //
+  // Filetype Settings
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  // JSON with Comments files
+  "[jsonc]": {
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ],
+    // Use VSCode in-built JSON syntax formatter
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  // Plaintext files
+  "[plaintext]": {
+    // Overwrite VSCode defaults
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "editor.unicodeHighlight.invisibleCharacters": true,
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ]
+  },
+  // Shell scripts
+  "[shellscript]": {
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ],
+    // Use shell-format extension shell script formatter
+    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.formatOnSave": true
+  }
+}

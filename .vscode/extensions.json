@@ -1,0 +1,18 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about
+	// workspace recommendations.
+	// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+	// List of extensions recommended for users of this workspace.
+	"recommendations": [
+		// Prettier formatter and linting
+		"esbenp.prettier-vscode",
+		// Python dependency needed for rst extension
+		"ms-python.python",
+		// Markdown linter and format check
+		"davidanson.vscode-markdownlint",
+		// Shell script, dockerfile, etc formatter
+		"foxundermoon.shell-format",
+		// Shell script linter
+		"timonwong.shellcheck"
+	],
+}
