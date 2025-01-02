@@ -76,14 +76,24 @@
     "streetsidesoftware.code-spell-checker",
     "streetsidesoftware.code-spell-checker-british-english"
   ],
-  // Enable Windows VSCode to trust local WSL workspace
+  // Code Spell Checker extension: use British dictionary
+  "cSpell.language": "en-GB",
+  "cSpell.enabledFileTypes": {
+    "*": true,
+    "json": false,
+    "jsonc": false
+  },
+  // Material Icon Theme extension: set workbench to use extension icons
+  "workbench.iconTheme": "material-icon-theme",
   "security.allowedUNCHosts": [
     "wsl.localhost"
   ],
-  // Code Spell Checker extension: use British dictionary
-  "cSpell.language": "en-GB",
-  // Material Icon Theme extension: set workbench to use extension icons
-  "workbench.iconTheme": "material-icon-theme",
+  // Indent Rainbow extension:
+  "indentRainbow.excludedLanguages": [
+    "plaintext",
+    "markdown",
+    "restructuredtext"
+  ],
   // Rewrap extension: auto-wrap at 80 characters per line as a default
   "rewrap.wrappingColumn": 80,
   "rewrap.autoWrap.enabled": true,
@@ -99,9 +109,32 @@
         "color": "#315031"
       }
     ],
+    // User 2 spaces for tabs
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
     // Use VSCode in-built JSON syntax formatter
     "editor.defaultFormatter": "vscode.json-language-features",
     "editor.formatOnSave": true
+  },
+  // Markdown files
+  "[markdown]": {
+    // Settings that deviate from VSCode defaults
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "editor.unicodeHighlight.invisibleCharacters": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.wordWrap": "off",
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ],
+    // cSpell extension defaults for markdown
+    "cSpell.fixSpellingWithRenameProvider": true,
+    "cSpell.advanced.feature.useReferenceProviderWithRename": true,
+    "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/",
   },
   // Plaintext files
   "[plaintext]": {
@@ -115,6 +148,20 @@
         "color": "#315031"
       }
     ]
+  },
+  // reStructuredText
+  "[restructuredtext]": {
+    // Recommend guideline limit at 80 characters per line
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#315031"
+      }
+    ],
+    // Use 3 spaces per tab (as per Sphinx rst guidelines)
+    "editor.detectIndentation": false,
+    "editor.tabSize": 3,
+    "editor.insertSpaces": true
   },
   // Shell scripts
   "[shellscript]": {
