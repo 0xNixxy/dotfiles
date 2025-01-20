@@ -43,6 +43,8 @@
   "telemetry.telemetryLevel": "off",
   // Enable mouse wheel zoom for text when holding Ctrl + scrolling mouse wheel
   "editor.mouseWheelZoom": true,
+  // VSCode Explorer window sorts files by type
+  "explorer.sortOrder": "type",
   // Set 3 rulers with different colours for positions 80, 100, 120
   "editor.rulers": [
     {
@@ -69,7 +71,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   // Git settings
-  "git.autofetch": true,
+  "git.autofetch": "all",
   // Dev container settings
   "dev.containers.executeInWSL": true,
   "dev.containers.defaultExtensions": [
@@ -77,6 +79,9 @@
     "streetsidesoftware.code-spell-checker-british-english"
   ],
   // Code Spell Checker extension: use British dictionary
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
   "cSpell.language": "en-GB",
   "cSpell.enabledFileTypes": {
     "*": true,
@@ -85,9 +90,6 @@
   },
   // Material Icon Theme extension: set workbench to use extension icons
   "workbench.iconTheme": "material-icon-theme",
-  "security.allowedUNCHosts": [
-    "wsl.localhost"
-  ],
   // Indent Rainbow extension:
   "indentRainbow.excludedLanguages": [
     "plaintext",
@@ -109,7 +111,17 @@
         "color": "#315031"
       }
     ],
-    // User 2 spaces for tabs
+    // Use 2 spaces for tabs
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    // Use VSCode in-built JSON syntax formatter
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  // JSON files
+  "[json]": {
+    // Use 2 spaces for tabs
     "editor.detectIndentation": false,
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
@@ -135,6 +147,9 @@
     "cSpell.fixSpellingWithRenameProvider": true,
     "cSpell.advanced.feature.useReferenceProviderWithRename": true,
     "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/",
+    // Use prettier formatter
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   // Plaintext files
   "[plaintext]": {
@@ -172,6 +187,10 @@
         "color": "#315031"
       }
     ],
+    // Use 2 spaces for tabs
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
     // Use shell-format extension shell script formatter
     "editor.defaultFormatter": "foxundermoon.shell-format",
     "editor.formatOnSave": true
