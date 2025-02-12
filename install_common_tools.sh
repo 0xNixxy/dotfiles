@@ -16,10 +16,13 @@ sudo apt update &&
 ################################################
 
 # Azure CLI
-install_azure_cli.sh
+./install_azure_cli.sh
 
 # GitHub CLI
-install_github_cli.sh
+./install_github_cli.sh
+
+# Docker CLI
+./install_docker_cli.sh
 
 # Rust toolchain
 # install_rust_cli.sh
