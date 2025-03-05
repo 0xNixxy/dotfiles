@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Script to install Azure CLI from official Microsoft repository
-# Reference: https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt#install-azure-cli
+# Script to install Caddy CLI from official Cloudsmith repository
+# Reference: https://caddyserver.com/docs/install#debian-ubuntu-raspbian
 
 # Install pre-requisites for Caddy CLI
 sudo apt update &&
