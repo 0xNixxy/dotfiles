@@ -134,6 +134,12 @@
     "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.formatOnSave": true
   },
+  "[css]": {
+    "editor.suggest.insertMode": "replace",
+    "cSpell.fixSpellingWithRenameProvider": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   // JSON with Comments files
   "[jsonc]": {
     // Recommend guideline limit at 80 characters per line
@@ -159,6 +165,12 @@
     "editor.insertSpaces": true,
     // Use VSCode in-built JSON syntax formatter
     "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.suggest.insertMode": "replace",
+    // Use Prettier for Javascript syntax formatter
+    "editor.defaultFormatter": "vscode.html-language-features",
     "editor.formatOnSave": true
   },
   "[javascript]": {
