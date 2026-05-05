@@ -117,6 +117,7 @@
   ],
   // C/C++ extension:
   "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, BreakBeforeBraces: Allman, LambdaBodyIndentation: Signature, IndentWidth: 2, ContinuationIndentWidth: 2 }",
+  "makefile.configureOnOpen": true,
   //
   // Filetype Settings
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
