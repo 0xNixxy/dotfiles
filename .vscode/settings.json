@@ -70,9 +70,9 @@
   // Code Spell Checker extension settings
   "cSpell.language": "en-GB",
   "cSpell.enabledFileTypes": {
-    "*": true,
     "json": false,
-    "jsonc": false
+    "jsonc": false,
+    "*": true
   },
   "cSpell.overrides": [
     {
